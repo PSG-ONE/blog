@@ -923,6 +923,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 768px) {
   .post-card { grid-column: span 12; }
+  .post-card:not(.post-card--featured) { grid-column: span 12; }
   .nav__links { display: none; }
   .hero { padding: 48px 0 40px; }
   .newsletter { padding: 32px 24px; }
