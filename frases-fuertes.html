@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frases — Brecha</title>
+  <meta name="description" content="Frases que golpean. Una biblioteca de imágenes editoriales con las ideas que definen Brecha." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>(function(){var t=localStorage.getItem('brecha-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">Brecha<span>.</span></a>
+        <ul class="nav__links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#articulos">Artículos</a></li>
+          <li><a href="frases-fuertes.html" class="active">Frases</a></li>
+          <li><a href="index.html#acerca">Acerca</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <div class="frases-hero">
+        <p class="frases-hero__tag">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
+          Biblioteca visual
+        </p>
+        <h1 class="frases-hero__title">Frases<br/><em>que golpean.</em></h1>
+        <p class="frases-hero__subtitle">
+          Las ideas más directas de Brecha en formato imagen.<br/>
+          Para guardar, compartir o simplemente leer.
+        </p>
+      </div>
+
+      <!-- GALERÍA — Agrega más imágenes duplicando un bloque .frase-card -->
+      <div class="frases-grid" id="frases-grid">
+
+        <div class="frase-card" onclick="openLightbox('image/el-mito-del-trabajo-moderno.png')">
+          <img src="image/el-mito-del-trabajo-moderno.png" alt="El mito del trabajo moderno" loading="lazy" />
+          <span class="frase-card__label">El mito del trabajo moderno</span>
+        </div>
+
+        <div class="frase-card" onclick="openLightbox('image/el-precio-del-silencio.png')">
+          <img src="image/el-precio-del-silencio.png" alt="El precio del silencio" loading="lazy" />
+          <span class="frase-card__label">El precio del silencio</span>
+        </div>
+
+        <div class="frase-card" onclick="openLightbox('image/metanoia-y-el-sistema.png')">
+          <img src="image/metanoia-y-el-sistema.png" alt="Metanoia y el sistema" loading="lazy" />
+          <span class="frase-card__label">Metanoia y el sistema</span>
+        </div>
+
+        <div class="frase-card" onclick="openLightbox('image/el-liderazgo-que-nadie-ensena.png')">
+          <img src="image/el-liderazgo-que-nadie-ensena.png" alt="El liderazgo que nadie enseña" loading="lazy" />
+          <span class="frase-card__label">El liderazgo que nadie enseña</span>
+        </div>
+
+        <div class="frase-card" onclick="openLightbox('image/MAquievalo.png')">
+          <img src="image/MAquievalo.png" alt="Lo que haría Maquiavelo" loading="lazy" />
+          <span class="frase-card__label">Lo que haría Maquiavelo</span>
+        </div>
+
+        <!-- PLANTILLA PARA AGREGAR MÁS:
+        <div class="frase-card" onclick="openLightbox('image/NOMBRE-DEL-ARCHIVO.png')">
+          <img src="image/NOMBRE-DEL-ARCHIVO.png" alt="Descripción" loading="lazy" />
+          <span class="frase-card__label">Título de la frase</span>
+        </div>
+        -->
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox__close" onclick="closeLightbox()" aria-label="Cerrar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer__logo">Brecha<span>.</span></div>
+        <p class="footer__copy">Filosofía, liderazgo y condición humana en el trabajo.</p>
+        <ul class="footer__links">
+          <li><a href="https://github.com/PSG-ONE/blog" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:santagadea.ia@gmail.com">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

@@ -114,8 +114,20 @@ function copyLink() {
   });
 }
 
+/* ─── Dark Mode Toggle ───────────────────────────────────────── */
+function initThemeToggle() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('brecha-theme', next);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTagFilter();
   initNewsletter();
   initActiveNav();
+  initThemeToggle();
 });

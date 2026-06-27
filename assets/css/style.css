@@ -1305,3 +1305,207 @@ a { color: inherit; text-decoration: none; }
     to   { opacity: 1; transform: translateY(0); }
   }
 }
+
+/* ─── Theme Toggle Button ─────────────────────────────────────── */
+.theme-toggle {
+  background: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-secondary);
+  transition: border-color var(--transition), color var(--transition);
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+.theme-toggle:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.theme-toggle .icon-moon { display: block; }
+.theme-toggle .icon-sun  { display: none; }
+
+/* ─── Dark Mode ──────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-primary:    #F0EFEB;
+  --color-secondary:  #888888;
+  --color-background: #0C0C0C;
+  --color-foreground: #F0EFEB;
+  --color-muted:      #1C1C1C;
+  --color-border:     #2C2C2C;
+  --color-surface:    #141414;
+  --color-dark-card:  #181818;
+}
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+
+[data-theme="dark"] body {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+[data-theme="dark"] .site-header {
+  background: rgba(12,12,12,0.94);
+}
+[data-theme="dark"] .newsletter {
+  border: 1px solid #2C2C2C;
+}
+[data-theme="dark"] .about-section {
+  background: #000;
+  border-color: #2C2C2C;
+}
+[data-theme="dark"] .post-blockquote {
+  border-color: var(--color-accent);
+  background: #141414;
+}
+[data-theme="dark"] .post-data {
+  background: #141414;
+  border-color: #2C2C2C;
+}
+[data-theme="dark"] .post-tools {
+  background: #141414;
+  border-color: #2C2C2C;
+}
+[data-theme="dark"] .share-btn {
+  background: #141414;
+}
+[data-theme="dark"] .post-nav a {
+  background: #141414;
+  border-color: #2C2C2C;
+}
+[data-theme="dark"] .post-nav a:hover {
+  background: #1C1C1C;
+}
+[data-theme="dark"] .post-sources {
+  background: #141414;
+  border-color: #2C2C2C;
+}
+
+/* ─── Frases Fuertes Gallery ──────────────────────────────────── */
+.frases-hero {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--color-border);
+}
+.frases-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+.frases-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.frases-hero__title em { font-style: normal; color: var(--color-accent); }
+.frases-hero__subtitle {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.frases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 56px 0;
+}
+
+.frase-card {
+  position: relative;
+  background: var(--color-dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.frase-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+.frase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+.frase-card:hover img { opacity: 0.85; }
+.frase-card__label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 20px 20px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.frase-card:hover .frase-card__label { opacity: 1; }
+
+.frases-empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 80px 40px;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-secondary);
+}
+.frases-empty p { font-size: 0.9375rem; line-height: 1.7; }
+.frases-empty strong { color: var(--color-primary); }
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.lightbox.open { display: flex; }
+.lightbox__img {
+  max-width: min(600px, 90vw);
+  max-height: 90vh;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+}
+.lightbox__close {
+  position: absolute;
+  top: 20px; right: 24px;
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-sm);
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.25rem;
+  transition: border-color var(--transition);
+}
+.lightbox__close:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+@media (max-width: 768px) {
+  .frases-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+@media (max-width: 480px) {
+  .frases-grid { grid-template-columns: 1fr; }
+}
