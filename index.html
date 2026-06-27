@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sin Filtros — Liderazgo moderno y lo que callamos</title>
+  <meta name="description" content="Reflexiones honestas sobre liderazgo técnico, talento percibido y las conversaciones que los devs senior nunca tienen en voz alta." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Lucide via CDN) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">Sin<span>Filtros</span></a>
+        <ul class="nav__links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="#articulos">Artículos</a></li>
+          <li><a href="#acerca">Acerca</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero__tag">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
+        Liderazgo moderno · Talento · Devs
+      </p>
+      <h1 class="hero__title">Lo que nadie dice<br/>en las reuniones de equipo</h1>
+      <p class="hero__subtitle">
+        Reflexiones sin filtros sobre liderazgo técnico, el desafío del talento percibido
+        y las conversaciones que los devs senior guardan para sí mismos.
+      </p>
+      <div class="hero__meta">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Artículos honestos
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Lectura de 5–10 min
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Para líderes técnicos y devs
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Articles ──────────────────────────────────────────── -->
+  <main id="articulos">
+    <section class="section">
+      <div class="container">
+
+        <!-- Tag filter -->
+        <div class="tags-filter">
+          <button class="tag-btn active" data-tag="all">Todos</button>
+          <button class="tag-btn" data-tag="talento">Talento</button>
+          <button class="tag-btn" data-tag="liderazgo">Liderazgo</button>
+          <button class="tag-btn" data-tag="equipos">Equipos</button>
+          <button class="tag-btn" data-tag="carrera">Carrera</button>
+          <button class="tag-btn" data-tag="cultura">Cultura</button>
+        </div>
+
+        <div class="section__header">
+          <h2 class="section__title">Artículos</h2>
+        </div>
+
+        <div class="posts-grid">
+
+          <!-- FEATURED -->
+          <article class="post-card post-card--featured"
+                   data-tags="talento,liderazgo"
+                   onclick="location.href='posts/el-dev-mas-callado.html'">
+            <div class="post-card__image-placeholder">✦</div>
+            <div class="post-card__body">
+              <p class="post-card__tag">Talento · Liderazgo</p>
+              <h2 class="post-card__title">Por qué el dev más callado del equipo suele ser el más valioso</h2>
+              <p class="post-card__excerpt">
+                Confundimos visibilidad con impacto. El que más habla en el standup
+                rara vez es el que más mueve. Hay un patrón que se repite en todos
+                los equipos de desarrollo que he visto desde adentro.
+              </p>
+              <div class="post-card__footer">
+                <span class="post-card__date">Junio 2025</span>
+                <span class="post-card__read">
+                  Leer
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 1 -->
+          <article class="post-card"
+                   data-tags="talento,carrera"
+                   onclick="location.href='posts/talento-percibido.html'">
+            <div class="post-card__image-placeholder">◈</div>
+            <div class="post-card__body">
+              <p class="post-card__tag">Talento · Carrera</p>
+              <h3 class="post-card__title">El talento percibido vs. el talento real: la brecha que nadie nombra</h3>
+              <p class="post-card__excerpt">
+                En los equipos técnicos hay dos rankings paralelos: el que aparece
+                en los reviews de desempeño y el que todos conocen pero nadie pone por escrito.
+              </p>
+              <div class="post-card__footer">
+                <span class="post-card__date">Mayo 2025</span>
+                <span class="post-card__read">
+                  Leer
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="post-card"
+                   data-tags="equipos,cultura"
+                   onclick="location.href='posts/rangos-que-callamos.html'">
+            <div class="post-card__image-placeholder">⬡</div>
+            <div class="post-card__body">
+              <p class="post-card__tag">Equipos · Cultura</p>
+              <h3 class="post-card__title">Los rangos de desarrolladores y todo lo que callamos sobre ellos</h3>
+              <p class="post-card__excerpt">
+                Junior, Mid, Senior. Títulos que en teoría describen experiencia
+                pero que en la práctica describen algo mucho más complicado
+                y menos honesto.
+              </p>
+              <div class="post-card__footer">
+                <span class="post-card__date">Mayo 2025</span>
+                <span class="post-card__read">
+                  Leer
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="post-card"
+                   data-tags="liderazgo,equipos"
+                   onclick="location.href='#'">
+            <div class="post-card__image-placeholder">◎</div>
+            <div class="post-card__body">
+              <p class="post-card__tag">Liderazgo · Equipos</p>
+              <h3 class="post-card__title">El liderazgo moderno no se parece en nada a lo que te enseñaron</h3>
+              <p class="post-card__excerpt">
+                Los libros de liderazgo describen un mundo que no existe.
+                Lo que funciona hoy en equipos de tecnología se construyó
+                rompiendo casi todos esos manuales.
+              </p>
+              <div class="post-card__footer">
+                <span class="post-card__date">Próximamente</span>
+                <span class="post-card__read" style="opacity:.4; pointer-events:none;">
+                  Pronto
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Newsletter ─────────────────────────────────────── -->
+    <div class="container">
+      <div class="newsletter">
+        <div>
+          <h2 class="newsletter__title">¿Te resonó algo?</h2>
+          <p class="newsletter__subtitle">
+            Nuevos artículos cuando tenga algo real que decir.<br/>
+            Sin spam. Sin contenido de relleno.
+          </p>
+        </div>
+        <form class="newsletter__form" id="newsletter-form">
+          <input
+            type="email"
+            id="newsletter-email"
+            class="newsletter__input"
+            placeholder="tu@correo.com"
+            autocomplete="email"
+            aria-label="Tu correo electrónico"
+          />
+          <button type="submit" id="newsletter-btn" class="btn-accent">
+            Suscribirse
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="site-footer" id="acerca">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer__logo">Sin<span>Filtros</span></div>
+        <p class="footer__copy">Perspectivas sin adorno sobre tecnología y liderazgo.</p>
+        <ul class="footer__links">
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:santagadea.ia@gmail.com">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
