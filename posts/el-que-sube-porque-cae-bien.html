@@ -96,36 +96,45 @@
 
         <div class="post-infographic">
           <svg viewBox="0 0 560 285" xmlns="http://www.w3.org/2000/svg">
+            <style>
+              .svg-muted  { fill: #525252; }
+              .svg-main   { fill: #0A0A0A; }
+              .svg-dim    { fill: #999; }
+              .svg-sep    { stroke: #D8D5CE; }
+              [data-theme="dark"] .svg-muted { fill: #888; }
+              [data-theme="dark"] .svg-main  { fill: #D8D5CE; }
+              [data-theme="dark"] .svg-sep   { stroke: #333; }
+            </style>
 
             <!-- Column headers -->
-            <text x="140" y="34" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.14em" fill="#999">LO QUE SE DICE</text>
+            <text x="140" y="34" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.14em" class="svg-dim">LO QUE SE DICE</text>
             <text x="420" y="34" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.14em" fill="#00B4D8">LO QUE SE HACE</text>
 
             <!-- Vertical divider -->
             <line x1="280" y1="18" x2="280" y2="265" stroke="#00B4D8" stroke-width="1.5" opacity="0.35"/>
 
             <!-- Row separators -->
-            <line x1="30" y1="50" x2="530" y2="50" stroke="#D8D5CE" stroke-width="0.75"/>
-            <line x1="30" y1="128" x2="530" y2="128" stroke="#D8D5CE" stroke-width="0.75"/>
-            <line x1="30" y1="206" x2="530" y2="206" stroke="#D8D5CE" stroke-width="0.75"/>
-            <line x1="30" y1="265" x2="530" y2="265" stroke="#D8D5CE" stroke-width="0.75"/>
+            <line x1="30" y1="50" x2="530" y2="50" stroke-width="0.75" class="svg-sep"/>
+            <line x1="30" y1="128" x2="530" y2="128" stroke-width="0.75" class="svg-sep"/>
+            <line x1="30" y1="206" x2="530" y2="206" stroke-width="0.75" class="svg-sep"/>
+            <line x1="30" y1="265" x2="530" y2="265" stroke-width="0.75" class="svg-sep"/>
 
             <!-- Row 1 -->
-            <text x="140" y="95" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-style="italic" fill="#525252">&ldquo;Ascendemos al mejor&rdquo;</text>
-            <text x="420" y="95" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" fill="#0A0A0A">&ldquo;Ascendemos al que cae bien&rdquo;</text>
+            <text x="140" y="95" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-style="italic" class="svg-muted">&ldquo;Ascendemos al mejor&rdquo;</text>
+            <text x="420" y="95" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" class="svg-main">&ldquo;Ascendemos al que cae bien&rdquo;</text>
 
             <!-- Row 2 -->
-            <text x="140" y="173" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-style="italic" fill="#525252">&ldquo;Valoramos la franqueza&rdquo;</text>
-            <text x="420" y="166" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" fill="#0A0A0A">&ldquo;Evitamos al que dice</text>
-            <text x="420" y="183" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" fill="#0A0A0A">lo que duele&rdquo;</text>
+            <text x="140" y="173" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-style="italic" class="svg-muted">&ldquo;Valoramos la franqueza&rdquo;</text>
+            <text x="420" y="166" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" class="svg-main">&ldquo;Evitamos al que dice</text>
+            <text x="420" y="183" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" class="svg-main">lo que duele&rdquo;</text>
 
             <!-- Row 3 -->
-            <text x="140" y="242" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-style="italic" fill="#525252">&ldquo;Los criterios son claros&rdquo;</text>
-            <text x="420" y="235" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" fill="#0A0A0A">&ldquo;Los criterios reales</text>
-            <text x="420" y="252" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" fill="#0A0A0A">son t&aacute;citos&rdquo;</text>
+            <text x="140" y="242" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-style="italic" class="svg-muted">&ldquo;Los criterios son claros&rdquo;</text>
+            <text x="420" y="235" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" class="svg-main">&ldquo;Los criterios reales</text>
+            <text x="420" y="252" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" class="svg-main">son t&aacute;citos&rdquo;</text>
 
             <!-- Attribution -->
-            <text x="280" y="280" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#999" letter-spacing="0.04em">Teor&iacute;a esposada vs. teor&iacute;a en uso &mdash; Chris Argyris</text>
+            <text x="280" y="280" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" class="svg-dim" letter-spacing="0.04em">Teor&iacute;a esposada vs. teor&iacute;a en uso &mdash; Chris Argyris</text>
           </svg>
         </div>
 
