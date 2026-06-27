@@ -1033,6 +1033,15 @@ a { color: inherit; text-decoration: none; }
   .about__photo { width: 120px; height: 120px; }
 }
 
+/* ─── Post Signature ────────────────────────────────────────── */
+.post-signature {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+  margin-top: 8px;
+}
+
 /* ─── Share Bar ──────────────────────────────────────────────── */
 .post-share {
   display: flex;
