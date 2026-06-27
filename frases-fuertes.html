@@ -41,111 +41,164 @@
         </p>
         <h1 class="frases-hero__title">Frases<br/><em>que golpean.</em></h1>
         <p class="frases-hero__subtitle">
-          Las ideas más directas de Brecha en formato imagen.<br/>
-          Para guardar, compartir o simplemente leer.
+          Las ideas más directas de Brecha.<br/>
+          Pasa el cursor sobre cualquier imagen y compártela donde quieras.
         </p>
       </div>
 
-      <!-- GALERÍA — Agrega más frases duplicando un bloque .frase-card abajo -->
+      <!-- GALERÍA -->
       <div class="frases-grid" id="frases-grid">
 
-        <div class="frase-card">
+        <div class="frase-card" data-titulo="El mito del trabajo moderno" data-img="image/el-mito-del-trabajo-moderno.png">
           <img src="image/el-mito-del-trabajo-moderno.png" alt="El mito del trabajo moderno" loading="lazy" />
           <div class="frase-card__overlay">
-            <button class="frase-share-btn" onclick="descargar('image/el-mito-del-trabajo-moderno.png','el-mito-del-trabajo-moderno.png')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Descargar
-            </button>
-            <button class="frase-share-btn frase-share-btn--wa" onclick="compartirWa('El mito del trabajo moderno — Brecha')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.855L0 24l6.29-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.371l-.36-.214-3.732.893.936-3.617-.234-.373A9.793 9.793 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
-              WhatsApp
-            </button>
+            <span class="frase-overlay__label">Compartir en</span>
+            <div class="frase-social-row">
+              <!-- Instagram -->
+              <button class="frase-social-btn frase-social-btn--ig" title="Instagram" onclick="compartir('ig',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </button>
+              <!-- Facebook -->
+              <button class="frase-social-btn frase-social-btn--fb" title="Facebook" onclick="compartir('fb',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </button>
+              <!-- Twitter / X -->
+              <button class="frase-social-btn frase-social-btn--tw" title="Twitter / X" onclick="compartir('tw',this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </button>
+              <!-- LinkedIn -->
+              <button class="frase-social-btn frase-social-btn--li" title="LinkedIn" onclick="compartir('li',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </button>
+              <!-- Threads -->
+              <button class="frase-social-btn frase-social-btn--th" title="Threads" onclick="compartir('th',this)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068c0-7.609 4.73-12.08 10.5-12.068 3.531 0 6.162 1.56 7.616 4.392l-2.042 1.056C16.456 3.205 14.599 2.093 12 2.093c-4.756-.005-8.407 3.6-8.407 9.975 0 2.891.737 5.174 2.13 6.694 1.296 1.414 3.108 2.147 5.27 2.147h.004c2.09-.013 3.66-.773 4.664-2.26.767-1.133 1.105-2.682 1.012-4.61-.39.143-.798.264-1.22.36-1.07.24-2.157.32-3.144.243-1.016-.08-2.008-.357-2.778-.847-.915-.583-1.458-1.5-1.458-2.54v-.01c0-1.132.565-2.15 1.546-2.875.853-.63 1.97-.967 3.24-.976 1.265-.01 2.43.32 3.312.89l.003.002c.19-.539.285-1.11.285-1.703 0-1.015-.322-1.903-.909-2.477-.59-.578-1.433-.871-2.511-.871-.974 0-1.8.285-2.456.849a3.847 3.847 0 0 0-1.231 2.03l-2.13-.47a5.956 5.956 0 0 1 1.82-3.003C9.66 2.4 10.82 2 12.186 2c1.653 0 2.996.498 3.996 1.48 1.002.985 1.508 2.345 1.508 4.044 0 .973-.182 1.91-.537 2.787.2.185.39.38.57.586 1.133 1.308 1.66 3.007 1.66 5.345 0 2.626-.544 4.701-1.616 6.172-1.152 1.58-2.887 2.418-5.177 2.586z"/></svg>
+              </button>
+            </div>
+            <button class="frase-download-link" onclick="descargar('image/el-mito-del-trabajo-moderno.png','el-mito-del-trabajo-moderno.png')">↓ Descargar imagen</button>
           </div>
         </div>
 
-        <div class="frase-card">
+        <div class="frase-card" data-titulo="El precio del silencio" data-img="image/el-precio-del-silencio.png">
           <img src="image/el-precio-del-silencio.png" alt="El precio del silencio" loading="lazy" />
           <div class="frase-card__overlay">
-            <button class="frase-share-btn" onclick="descargar('image/el-precio-del-silencio.png','el-precio-del-silencio.png')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Descargar
-            </button>
-            <button class="frase-share-btn frase-share-btn--wa" onclick="compartirWa('El precio del silencio — Brecha')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.855L0 24l6.29-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.371l-.36-.214-3.732.893.936-3.617-.234-.373A9.793 9.793 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
-              WhatsApp
-            </button>
+            <span class="frase-overlay__label">Compartir en</span>
+            <div class="frase-social-row">
+              <button class="frase-social-btn frase-social-btn--ig" title="Instagram" onclick="compartir('ig',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--fb" title="Facebook" onclick="compartir('fb',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--tw" title="Twitter / X" onclick="compartir('tw',this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--li" title="LinkedIn" onclick="compartir('li',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--th" title="Threads" onclick="compartir('th',this)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068c0-7.609 4.73-12.08 10.5-12.068 3.531 0 6.162 1.56 7.616 4.392l-2.042 1.056C16.456 3.205 14.599 2.093 12 2.093c-4.756-.005-8.407 3.6-8.407 9.975 0 2.891.737 5.174 2.13 6.694 1.296 1.414 3.108 2.147 5.27 2.147h.004c2.09-.013 3.66-.773 4.664-2.26.767-1.133 1.105-2.682 1.012-4.61-.39.143-.798.264-1.22.36-1.07.24-2.157.32-3.144.243-1.016-.08-2.008-.357-2.778-.847-.915-.583-1.458-1.5-1.458-2.54v-.01c0-1.132.565-2.15 1.546-2.875.853-.63 1.97-.967 3.24-.976 1.265-.01 2.43.32 3.312.89l.003.002c.19-.539.285-1.11.285-1.703 0-1.015-.322-1.903-.909-2.477-.59-.578-1.433-.871-2.511-.871-.974 0-1.8.285-2.456.849a3.847 3.847 0 0 0-1.231 2.03l-2.13-.47a5.956 5.956 0 0 1 1.82-3.003C9.66 2.4 10.82 2 12.186 2c1.653 0 2.996.498 3.996 1.48 1.002.985 1.508 2.345 1.508 4.044 0 .973-.182 1.91-.537 2.787.2.185.39.38.57.586 1.133 1.308 1.66 3.007 1.66 5.345 0 2.626-.544 4.701-1.616 6.172-1.152 1.58-2.887 2.418-5.177 2.586z"/></svg>
+              </button>
+            </div>
+            <button class="frase-download-link" onclick="descargar('image/el-precio-del-silencio.png','el-precio-del-silencio.png')">↓ Descargar imagen</button>
           </div>
         </div>
 
-        <div class="frase-card">
+        <div class="frase-card" data-titulo="Metanoia y el sistema" data-img="image/metanoia-y-el-sistema.png">
           <img src="image/metanoia-y-el-sistema.png" alt="Metanoia y el sistema" loading="lazy" />
           <div class="frase-card__overlay">
-            <button class="frase-share-btn" onclick="descargar('image/metanoia-y-el-sistema.png','metanoia-y-el-sistema.png')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Descargar
-            </button>
-            <button class="frase-share-btn frase-share-btn--wa" onclick="compartirWa('Metanoia y el sistema — Brecha')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.855L0 24l6.29-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.371l-.36-.214-3.732.893.936-3.617-.234-.373A9.793 9.793 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
-              WhatsApp
-            </button>
+            <span class="frase-overlay__label">Compartir en</span>
+            <div class="frase-social-row">
+              <button class="frase-social-btn frase-social-btn--ig" title="Instagram" onclick="compartir('ig',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--fb" title="Facebook" onclick="compartir('fb',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--tw" title="Twitter / X" onclick="compartir('tw',this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--li" title="LinkedIn" onclick="compartir('li',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--th" title="Threads" onclick="compartir('th',this)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068c0-7.609 4.73-12.08 10.5-12.068 3.531 0 6.162 1.56 7.616 4.392l-2.042 1.056C16.456 3.205 14.599 2.093 12 2.093c-4.756-.005-8.407 3.6-8.407 9.975 0 2.891.737 5.174 2.13 6.694 1.296 1.414 3.108 2.147 5.27 2.147h.004c2.09-.013 3.66-.773 4.664-2.26.767-1.133 1.105-2.682 1.012-4.61-.39.143-.798.264-1.22.36-1.07.24-2.157.32-3.144.243-1.016-.08-2.008-.357-2.778-.847-.915-.583-1.458-1.5-1.458-2.54v-.01c0-1.132.565-2.15 1.546-2.875.853-.63 1.97-.967 3.24-.976 1.265-.01 2.43.32 3.312.89l.003.002c.19-.539.285-1.11.285-1.703 0-1.015-.322-1.903-.909-2.477-.59-.578-1.433-.871-2.511-.871-.974 0-1.8.285-2.456.849a3.847 3.847 0 0 0-1.231 2.03l-2.13-.47a5.956 5.956 0 0 1 1.82-3.003C9.66 2.4 10.82 2 12.186 2c1.653 0 2.996.498 3.996 1.48 1.002.985 1.508 2.345 1.508 4.044 0 .973-.182 1.91-.537 2.787.2.185.39.38.57.586 1.133 1.308 1.66 3.007 1.66 5.345 0 2.626-.544 4.701-1.616 6.172-1.152 1.58-2.887 2.418-5.177 2.586z"/></svg>
+              </button>
+            </div>
+            <button class="frase-download-link" onclick="descargar('image/metanoia-y-el-sistema.png','metanoia-y-el-sistema.png')">↓ Descargar imagen</button>
           </div>
         </div>
 
-        <div class="frase-card">
+        <div class="frase-card" data-titulo="El liderazgo que nadie enseña" data-img="image/el-liderazgo-que-nadie-ensena.png">
           <img src="image/el-liderazgo-que-nadie-ensena.png" alt="El liderazgo que nadie enseña" loading="lazy" />
           <div class="frase-card__overlay">
-            <button class="frase-share-btn" onclick="descargar('image/el-liderazgo-que-nadie-ensena.png','el-liderazgo-que-nadie-ensena.png')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Descargar
-            </button>
-            <button class="frase-share-btn frase-share-btn--wa" onclick="compartirWa('El liderazgo que nadie enseña — Brecha')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.855L0 24l6.29-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.371l-.36-.214-3.732.893.936-3.617-.234-.373A9.793 9.793 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
-              WhatsApp
-            </button>
+            <span class="frase-overlay__label">Compartir en</span>
+            <div class="frase-social-row">
+              <button class="frase-social-btn frase-social-btn--ig" title="Instagram" onclick="compartir('ig',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--fb" title="Facebook" onclick="compartir('fb',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--tw" title="Twitter / X" onclick="compartir('tw',this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--li" title="LinkedIn" onclick="compartir('li',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--th" title="Threads" onclick="compartir('th',this)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068c0-7.609 4.73-12.08 10.5-12.068 3.531 0 6.162 1.56 7.616 4.392l-2.042 1.056C16.456 3.205 14.599 2.093 12 2.093c-4.756-.005-8.407 3.6-8.407 9.975 0 2.891.737 5.174 2.13 6.694 1.296 1.414 3.108 2.147 5.27 2.147h.004c2.09-.013 3.66-.773 4.664-2.26.767-1.133 1.105-2.682 1.012-4.61-.39.143-.798.264-1.22.36-1.07.24-2.157.32-3.144.243-1.016-.08-2.008-.357-2.778-.847-.915-.583-1.458-1.5-1.458-2.54v-.01c0-1.132.565-2.15 1.546-2.875.853-.63 1.97-.967 3.24-.976 1.265-.01 2.43.32 3.312.89l.003.002c.19-.539.285-1.11.285-1.703 0-1.015-.322-1.903-.909-2.477-.59-.578-1.433-.871-2.511-.871-.974 0-1.8.285-2.456.849a3.847 3.847 0 0 0-1.231 2.03l-2.13-.47a5.956 5.956 0 0 1 1.82-3.003C9.66 2.4 10.82 2 12.186 2c1.653 0 2.996.498 3.996 1.48 1.002.985 1.508 2.345 1.508 4.044 0 .973-.182 1.91-.537 2.787.2.185.39.38.57.586 1.133 1.308 1.66 3.007 1.66 5.345 0 2.626-.544 4.701-1.616 6.172-1.152 1.58-2.887 2.418-5.177 2.586z"/></svg>
+              </button>
+            </div>
+            <button class="frase-download-link" onclick="descargar('image/el-liderazgo-que-nadie-ensena.png','el-liderazgo-que-nadie-ensena.png')">↓ Descargar imagen</button>
           </div>
         </div>
 
-        <div class="frase-card">
+        <div class="frase-card" data-titulo="Lo que haría Maquiavelo" data-img="image/MAquievalo.png">
           <img src="image/MAquievalo.png" alt="Lo que haría Maquiavelo" loading="lazy" />
           <div class="frase-card__overlay">
-            <button class="frase-share-btn" onclick="descargar('image/MAquievalo.png','lo-que-haria-maquiavelo.png')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Descargar
-            </button>
-            <button class="frase-share-btn frase-share-btn--wa" onclick="compartirWa('Lo que haría Maquiavelo — Brecha')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.855L0 24l6.29-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.371l-.36-.214-3.732.893.936-3.617-.234-.373A9.793 9.793 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
-              WhatsApp
-            </button>
+            <span class="frase-overlay__label">Compartir en</span>
+            <div class="frase-social-row">
+              <button class="frase-social-btn frase-social-btn--ig" title="Instagram" onclick="compartir('ig',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--fb" title="Facebook" onclick="compartir('fb',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--tw" title="Twitter / X" onclick="compartir('tw',this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--li" title="LinkedIn" onclick="compartir('li',this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </button>
+              <button class="frase-social-btn frase-social-btn--th" title="Threads" onclick="compartir('th',this)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068c0-7.609 4.73-12.08 10.5-12.068 3.531 0 6.162 1.56 7.616 4.392l-2.042 1.056C16.456 3.205 14.599 2.093 12 2.093c-4.756-.005-8.407 3.6-8.407 9.975 0 2.891.737 5.174 2.13 6.694 1.296 1.414 3.108 2.147 5.27 2.147h.004c2.09-.013 3.66-.773 4.664-2.26.767-1.133 1.105-2.682 1.012-4.61-.39.143-.798.264-1.22.36-1.07.24-2.157.32-3.144.243-1.016-.08-2.008-.357-2.778-.847-.915-.583-1.458-1.5-1.458-2.54v-.01c0-1.132.565-2.15 1.546-2.875.853-.63 1.97-.967 3.24-.976 1.265-.01 2.43.32 3.312.89l.003.002c.19-.539.285-1.11.285-1.703 0-1.015-.322-1.903-.909-2.477-.59-.578-1.433-.871-2.511-.871-.974 0-1.8.285-2.456.849a3.847 3.847 0 0 0-1.231 2.03l-2.13-.47a5.956 5.956 0 0 1 1.82-3.003C9.66 2.4 10.82 2 12.186 2c1.653 0 2.996.498 3.996 1.48 1.002.985 1.508 2.345 1.508 4.044 0 .973-.182 1.91-.537 2.787.2.185.39.38.57.586 1.133 1.308 1.66 3.007 1.66 5.345 0 2.626-.544 4.701-1.616 6.172-1.152 1.58-2.887 2.418-5.177 2.586z"/></svg>
+              </button>
+            </div>
+            <button class="frase-download-link" onclick="descargar('image/MAquievalo.png','lo-que-haria-maquiavelo.png')">↓ Descargar imagen</button>
           </div>
         </div>
 
-        <!-- PLANTILLA PARA AGREGAR MÁS:
-        <div class="frase-card">
-          <img src="image/NOMBRE.png" alt="Descripción" loading="lazy" />
+        <!-- PLANTILLA PARA AGREGAR MÁS FRASES:
+        <div class="frase-card" data-titulo="TÍTULO" data-img="image/NOMBRE.png">
+          <img src="image/NOMBRE.png" alt="TÍTULO" loading="lazy" />
           <div class="frase-card__overlay">
-            <button class="frase-share-btn" onclick="descargar('image/NOMBRE.png','NOMBRE.png')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Descargar
-            </button>
-            <button class="frase-share-btn frase-share-btn--wa" onclick="compartirWa('TÍTULO — Brecha')">
-              WhatsApp
-            </button>
+            <span class="frase-overlay__label">Compartir en</span>
+            <div class="frase-social-row">
+              <button class="frase-social-btn frase-social-btn--ig" title="Instagram" onclick="compartir('ig',this)">... IG SVG ...</button>
+              <button class="frase-social-btn frase-social-btn--fb" title="Facebook" onclick="compartir('fb',this)">... FB SVG ...</button>
+              <button class="frase-social-btn frase-social-btn--tw" title="Twitter / X" onclick="compartir('tw',this)">... X SVG ...</button>
+              <button class="frase-social-btn frase-social-btn--li" title="LinkedIn" onclick="compartir('li',this)">... LI SVG ...</button>
+              <button class="frase-social-btn frase-social-btn--th" title="Threads" onclick="compartir('th',this)">... TH SVG ...</button>
+            </div>
+            <button class="frase-download-link" onclick="descargar('image/NOMBRE.png','NOMBRE.png')">↓ Descargar imagen</button>
           </div>
         </div>
         -->
 
       </div>
-
     </div>
   </main>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox__close" onclick="closeLightbox()" aria-label="Cerrar">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <img class="lightbox__img" id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
-  </div>
 
   <footer class="site-footer">
     <div class="container">
@@ -164,6 +217,47 @@
   <script>
     const PAGE_URL = 'https://thinking.zcod3.com/frases-fuertes.html';
 
+    function compartir(red, btn) {
+      const card  = btn.closest('.frase-card');
+      const titulo = card.dataset.titulo;
+      const img   = card.dataset.img;
+      const texto  = `"${titulo}" — Brecha\n\n${PAGE_URL}`;
+      const url   = encodeURIComponent(PAGE_URL);
+      const txt   = encodeURIComponent(texto);
+
+      switch (red) {
+        case 'ig':
+          // En móvil: compartir el archivo imagen vía Web Share API
+          if (navigator.share) {
+            fetch(img).then(r => r.blob()).then(blob => {
+              const file = new File([blob], 'brecha-frase.png', { type: 'image/png' });
+              if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                navigator.share({ files: [file], title: titulo, text: texto }).catch(() => {});
+              } else {
+                navigator.share({ title: titulo, text: texto, url: PAGE_URL }).catch(() => {});
+              }
+            });
+          } else {
+            // Desktop: descargar la imagen (Instagram no permite postear desde web sin API)
+            descargar(img, 'brecha-frase.png');
+            mostrarToast('Imagen descargada — súbela desde Instagram');
+          }
+          break;
+        case 'fb':
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+          break;
+        case 'tw':
+          window.open(`https://twitter.com/intent/tweet?text=${txt}`, '_blank');
+          break;
+        case 'li':
+          window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+          break;
+        case 'th':
+          window.open(`https://www.threads.net/intent/post?text=${txt}`, '_blank');
+          break;
+      }
+    }
+
     function descargar(src, filename) {
       fetch(src)
         .then(r => r.blob())
@@ -176,25 +270,20 @@
         });
     }
 
-    function compartirWa(titulo) {
-      const texto = `${titulo}\n\nMás frases en: ${PAGE_URL}`;
-      if (navigator.share) {
-        navigator.share({ title: titulo, text: texto, url: PAGE_URL }).catch(() => {});
-      } else {
-        window.open('https://wa.me/?text=' + encodeURIComponent(texto), '_blank');
+    function mostrarToast(msg) {
+      let t = document.getElementById('share-toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'share-toast';
+        t.className = 'share-toast';
+        document.body.appendChild(t);
       }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
     }
 
-    function openLightbox(src) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') {} });
   </script>
 </body>
 </html>

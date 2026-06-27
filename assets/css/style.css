@@ -1491,7 +1491,7 @@ a { color: inherit; text-decoration: none; }
   display: block;
   transition: opacity 0.3s ease;
 }
-.frase-card:hover img { opacity: 0.75; }
+.frase-card:hover img { opacity: 0.55; }
 
 .frase-card__overlay {
   position: absolute;
@@ -1500,53 +1500,64 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background: rgba(0,0,0,0.52);
+  gap: 16px;
+  background: rgba(0,0,0,0.68);
   opacity: 0;
   transition: opacity 0.22s ease;
-  padding: 20px;
+  padding: 24px;
 }
 .frase-card:hover .frase-card__overlay { opacity: 1; }
 
-.frase-share-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border-radius: 6px;
-  border: 1.5px solid rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.08);
-  color: #fff;
+.frase-overlay__label {
   font-family: var(--font-heading);
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  cursor: pointer;
-  width: 160px;
-  justify-content: center;
-  transition: background 0.15s ease, border-color 0.15s ease;
-  text-decoration: none;
+  color: rgba(255,255,255,0.5);
 }
-.frase-share-btn:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.7); }
-.frase-share-btn--wa { border-color: rgba(37,211,102,0.6); }
-.frase-share-btn--wa:hover { background: rgba(37,211,102,0.15); border-color: #25D366; }
 
-/* touch: always show on mobile */
-@media (hover: none) {
-  .frase-card__overlay {
-    opacity: 0;
-    background: transparent;
-    justify-content: flex-end;
-    padding-bottom: 14px;
-  }
-  .frase-card__overlay .frase-share-btn {
-    width: auto;
-    padding: 8px 14px;
-    font-size: 0.6875rem;
-  }
-  .frase-card:active .frase-card__overlay { opacity: 1; }
+/* Row of social platform buttons */
+.frase-social-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
+
+.frase-social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  flex-shrink: 0;
+}
+.frase-social-btn:hover { transform: scale(1.12); border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.16); }
+.frase-social-btn--ig:hover { background: #E1306C; border-color: #E1306C; }
+.frase-social-btn--fb:hover { background: #1877F2; border-color: #1877F2; }
+.frase-social-btn--tw:hover { background: #000; border-color: #fff; }
+.frase-social-btn--li:hover { background: #0A66C2; border-color: #0A66C2; }
+.frase-social-btn--th:hover { background: #111; border-color: #fff; }
+
+.frase-download-link {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  background: none;
+  border: none;
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.frase-download-link:hover { color: rgba(255,255,255,0.85); }
 
 .frases-empty {
   grid-column: 1/-1;
