@@ -620,6 +620,107 @@ a { color: inherit; text-decoration: none; }
 
 .post-nav__item--next { text-align: right; }
 
+/* ─── Philosophy Section ─────────────────────────────────────── */
+.post-philosophy {
+  background: var(--color-dark);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  margin: 56px 0;
+}
+
+.post-philosophy__label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-philosophy__label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.post-philosophy__item {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 20px;
+  margin-bottom: 28px;
+}
+.post-philosophy__item:last-child { margin-bottom: 0; }
+
+.post-philosophy__quote {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.45;
+  margin: 0 0 8px;
+  font-style: italic;
+}
+
+.post-philosophy__author {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Sources Section ────────────────────────────────────────── */
+.post-sources {
+  border-top: 1px solid var(--color-border);
+  padding-top: 36px;
+  margin-top: 56px;
+}
+
+.post-sources__label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.post-sources__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-sources__item {
+  font-size: 0.875rem;
+  color: var(--color-secondary);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-muted);
+  line-height: 1.6;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.post-sources__item:last-child { border-bottom: none; }
+
+.post-sources__num {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  min-width: 18px;
+}
+
+.post-sources__item em {
+  font-style: italic;
+  color: var(--color-foreground);
+  font-weight: 500;
+}
+
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .post-card--featured { grid-template-columns: 1fr; }
