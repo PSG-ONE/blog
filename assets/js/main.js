@@ -55,6 +55,44 @@ function initActiveNav() {
   });
 }
 
+/* ─── Share ──────────────────────────────────────────────────── */
+function showToast(msg) {
+  let toast = document.getElementById('share-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'share-toast';
+    toast.className = 'share-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+function shareThreads() {
+  const title = document.querySelector('.post-header__title')?.textContent?.trim() || document.title;
+  const url = window.location.href;
+  const text = encodeURIComponent(title + '\n\n' + url);
+  window.open('https://www.threads.net/intent/post?text=' + text, '_blank');
+}
+
+function shareInstagram() {
+  const url = window.location.href;
+  if (navigator.share) {
+    navigator.share({ title: document.title, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => {
+      showToast('Link copiado — pégalo en Instagram');
+    });
+  }
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    showToast('¡Link copiado al portapapeles!');
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTagFilter();
   initNewsletter();
