@@ -1444,22 +1444,62 @@ a { color: inherit; text-decoration: none; }
   display: block;
   transition: opacity 0.3s ease;
 }
-.frase-card:hover img { opacity: 0.85; }
-.frase-card__label {
+.frase-card:hover img { opacity: 0.75; }
+
+.frase-card__overlay {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 20px 20px 16px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.75));
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.52);
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.22s ease;
+  padding: 20px;
 }
-.frase-card:hover .frase-card__label { opacity: 1; }
+.frase-card:hover .frase-card__overlay { opacity: 1; }
+
+.frase-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 160px;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  text-decoration: none;
+}
+.frase-share-btn:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.7); }
+.frase-share-btn--wa { border-color: rgba(37,211,102,0.6); }
+.frase-share-btn--wa:hover { background: rgba(37,211,102,0.15); border-color: #25D366; }
+
+/* touch: always show on mobile */
+@media (hover: none) {
+  .frase-card__overlay {
+    opacity: 0;
+    background: transparent;
+    justify-content: flex-end;
+    padding-bottom: 14px;
+  }
+  .frase-card__overlay .frase-share-btn {
+    width: auto;
+    padding: 8px 14px;
+    font-size: 0.6875rem;
+  }
+  .frase-card:active .frase-card__overlay { opacity: 1; }
+}
 
 .frases-empty {
   grid-column: 1/-1;
