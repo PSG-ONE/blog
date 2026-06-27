@@ -6,19 +6,14 @@
   <title>Sin Filtros — Liderazgo moderno y lo que callamos</title>
   <meta name="description" content="Reflexiones honestas sobre liderazgo técnico, talento percibido y las conversaciones que los devs senior nunca tienen en voz alta." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Icons (Lucide via CDN) -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- ── Header ───────────────────────────────────────────── -->
   <header class="site-header">
     <div class="container">
       <nav class="nav">
@@ -32,7 +27,6 @@
     </div>
   </header>
 
-  <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="hero">
     <div class="container">
       <p class="hero__tag">
@@ -61,12 +55,10 @@
     </div>
   </section>
 
-  <!-- ── Articles ──────────────────────────────────────────── -->
   <main id="articulos">
     <section class="section">
       <div class="container">
 
-        <!-- Tag filter -->
         <div class="tags-filter">
           <button class="tag-btn active" data-tag="all">Todos</button>
           <button class="tag-btn" data-tag="talento">Talento</button>
@@ -82,7 +74,6 @@
 
         <div class="posts-grid">
 
-          <!-- FEATURED -->
           <article class="post-card post-card--featured"
                    data-tags="talento,liderazgo"
                    onclick="location.href='posts/el-dev-mas-callado.html'">
@@ -105,7 +96,6 @@
             </div>
           </article>
 
-          <!-- CARD 1 -->
           <article class="post-card"
                    data-tags="talento,carrera"
                    onclick="location.href='posts/talento-percibido.html'">
@@ -127,7 +117,6 @@
             </div>
           </article>
 
-          <!-- CARD 2 -->
           <article class="post-card"
                    data-tags="equipos,cultura"
                    onclick="location.href='posts/rangos-que-callamos.html'">
@@ -150,7 +139,6 @@
             </div>
           </article>
 
-          <!-- CARD 3 -->
           <article class="post-card"
                    data-tags="liderazgo,equipos"
                    onclick="location.href='#'">
@@ -165,9 +153,7 @@
               </p>
               <div class="post-card__footer">
                 <span class="post-card__date">Próximamente</span>
-                <span class="post-card__read" style="opacity:.4; pointer-events:none;">
-                  Pronto
-                </span>
+                <span class="post-card__read" style="opacity:.4; pointer-events:none;">Pronto</span>
               </div>
             </div>
           </article>
@@ -176,7 +162,6 @@
       </div>
     </section>
 
-    <!-- ── Newsletter ─────────────────────────────────────── -->
     <div class="container">
       <div class="newsletter">
         <div>
@@ -187,31 +172,22 @@
           </p>
         </div>
         <form class="newsletter__form" id="newsletter-form">
-          <input
-            type="email"
-            id="newsletter-email"
-            class="newsletter__input"
-            placeholder="tu@correo.com"
-            autocomplete="email"
-            aria-label="Tu correo electrónico"
-          />
-          <button type="submit" id="newsletter-btn" class="btn-accent">
-            Suscribirse
-          </button>
+          <input type="email" id="newsletter-email" class="newsletter__input"
+                 placeholder="tu@correo.com" autocomplete="email" aria-label="Tu correo electrónico" />
+          <button type="submit" id="newsletter-btn" class="btn-accent">Suscribirse</button>
         </form>
       </div>
     </div>
 
   </main>
 
-  <!-- ── Footer ────────────────────────────────────────────── -->
   <footer class="site-footer" id="acerca">
     <div class="container">
       <div class="footer-inner">
         <div class="footer__logo">Sin<span>Filtros</span></div>
         <p class="footer__copy">Perspectivas sin adorno sobre tecnología y liderazgo.</p>
         <ul class="footer__links">
-          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/PSG-ONE/blog" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="mailto:santagadea.ia@gmail.com">Contacto</a></li>
         </ul>
       </div>

@@ -1,16 +1,16 @@
 /* ─── Design Tokens ─────────────────────────────────────────── */
 :root {
-  --color-primary:     #18181B;
-  --color-secondary:   #3F3F46;
-  --color-accent:      #EC4899;
-  --color-background:  #FAFAFA;
-  --color-foreground:  #09090B;
-  --color-muted:       #E8ECF0;
-  --color-border:      #E4E4E7;
+  --color-primary:     #0A0A0A;
+  --color-secondary:   #525252;
+  --color-accent:      #F97316;
+  --color-background:  #F5F5F4;
+  --color-foreground:  #0A0A0A;
+  --color-muted:       #E7E5E4;
+  --color-border:      #D6D3D1;
   --color-surface:     #FFFFFF;
 
-  --font-heading: 'Caveat', cursive;
-  --font-body:    'Quicksand', sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-body:    'Inter', sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 8px;
