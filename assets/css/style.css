@@ -983,34 +983,31 @@ a { color: inherit; text-decoration: none; }
 .post-data--bars .post-data__grid {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 .post-data__bar-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-.post-data__bar-header {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
+  gap: 6px;
 }
 .post-data__bar-value {
   font-family: var(--font-heading);
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-accent);
   line-height: 1;
   letter-spacing: -0.03em;
-  flex-shrink: 0;
+  margin-bottom: 2px;
 }
 .post-data__bar-label {
-  font-size: 0.8125rem;
-  color: var(--color-secondary);
+  font-size: 0.875rem;
+  color: var(--color-primary);
   line-height: 1.5;
+  opacity: 0.85;
+  margin-bottom: 8px;
 }
 .post-data__bar-track {
-  height: 6px;
+  height: 5px;
   background: var(--color-muted);
   border-radius: 99px;
   overflow: hidden;
@@ -1025,7 +1022,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.6875rem;
   color: var(--color-secondary);
   line-height: 1.4;
-  opacity: 0.7;
+  margin-top: 4px;
 }
 
 /* ── Chart Style 3: Círculos / Gauges ── */
@@ -1449,7 +1446,7 @@ a { color: inherit; text-decoration: none; }
 /* ─── Dark Mode ──────────────────────────────────────────────── */
 [data-theme="dark"] {
   --color-primary:    #F0EFEB;
-  --color-secondary:  #888888;
+  --color-secondary:  #AAAAAA;
   --color-background: #0C0C0C;
   --color-foreground: #F0EFEB;
   --color-muted:      #1C1C1C;
