@@ -903,6 +903,100 @@ a { color: inherit; text-decoration: none; }
   .post-data { padding: 24px 20px; }
 }
 
+/* ── Chart Style 2: Barras horizontales ── */
+.post-data--bars .post-data__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.post-data__bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.post-data__bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.post-data__bar-label {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+.post-data__bar-value {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+.post-data__bar-track {
+  height: 6px;
+  background: var(--color-muted);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.post-data__bar-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 99px;
+  transition: width 0.6s ease-out;
+}
+.post-data__bar-desc {
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+  line-height: 1.4;
+}
+
+/* ── Chart Style 3: Círculos / Gauges ── */
+.post-data--circles .post-data__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.post-data__circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.post-data__circle-svg {
+  width: 90px;
+  height: 90px;
+}
+.post-data__circle-track {
+  fill: none;
+  stroke: var(--color-muted);
+  stroke-width: 6;
+}
+.post-data__circle-fill {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.8s ease-out;
+}
+.post-data__circle-text {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  fill: var(--color-primary);
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+.post-data__circle-label {
+  font-size: 0.8125rem;
+  color: var(--color-secondary);
+  line-height: 1.4;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .post-data--circles .post-data__grid { grid-template-columns: 1fr; }
+}
+
 /* ─── Post Infographic ───────────────────────────────────────── */
 .post-infographic {
   background: var(--color-surface);

@@ -46,7 +46,103 @@ Referencia JS: `../assets/js/main.js`
 
 ---
 
-## 3. BLOQUE DE DATOS
+## 3. BLOQUE DE DATOS — 3 ESTILOS DISPONIBLES
+
+> Usar un estilo diferente en cada artículo. Nunca repetir el mismo consecutivamente.
+
+---
+
+### ESTILO 1 — Números grandes (cards) `post-data`
+*Mejor para: stats con impacto visual fuerte, % o cifras llamativas*
+
+```html
+<div class="post-data">
+  <span class="post-data__label">Los datos</span>
+  <div class="post-data__grid">
+    <div class="post-data__item">
+      <div class="post-data__number">83<span>%</span></div>
+      <div class="post-data__desc">descripción corta del dato (max 12 palabras)</div>
+    </div>
+    <div class="post-data__item">
+      <div class="post-data__number">67<span>%</span></div>
+      <div class="post-data__desc">descripción corta del dato</div>
+    </div>
+    <div class="post-data__item">
+      <div class="post-data__number">1 de 3</div>
+      <div class="post-data__desc">descripción corta del dato</div>
+    </div>
+  </div>
+  <p class="post-data__source">Fuentes: <a href="URL" target="_blank" rel="noopener">Nombre</a></p>
+</div>
+```
+
+---
+
+### ESTILO 2 — Barras horizontales `post-data post-data--bars`
+*Mejor para: comparaciones, rankings, distribuciones porcentuales*
+
+```html
+<div class="post-data post-data--bars">
+  <span class="post-data__label">Los datos</span>
+  <div class="post-data__grid">
+    <div class="post-data__bar-item">
+      <div class="post-data__bar-header">
+        <span class="post-data__bar-label">Etiqueta del dato</span>
+        <span class="post-data__bar-value">68%</span>
+      </div>
+      <div class="post-data__bar-track">
+        <div class="post-data__bar-fill" style="width: 68%"></div>
+      </div>
+      <span class="post-data__bar-desc">Descripción corta de lo que significa</span>
+    </div>
+    <!-- repetir x3 -->
+  </div>
+  <p class="post-data__source">Fuentes: <a href="URL" target="_blank" rel="noopener">Nombre</a></p>
+</div>
+```
+
+---
+
+### ESTILO 3 — Círculos / Gauges `post-data post-data--circles`
+*Mejor para: porcentajes que muestran progreso, logro o déficit*
+
+```html
+<div class="post-data post-data--circles">
+  <span class="post-data__label">Los datos</span>
+  <div class="post-data__grid">
+    <!-- Círculo: circumferencia del círculo r=34 → 2πr ≈ 213.6 -->
+    <!-- stroke-dasharray="213.6" stroke-dashoffset="213.6 * (1 - valor/100)" -->
+    <div class="post-data__circle-item">
+      <svg class="post-data__circle-svg" viewBox="0 0 90 90">
+        <circle class="post-data__circle-track" cx="45" cy="45" r="34"/>
+        <circle class="post-data__circle-fill" cx="45" cy="45" r="34"
+          stroke-dasharray="213.6"
+          stroke-dashoffset="66"/><!-- dashoffset = 213.6 * (1 - 0.69) para 69% -->
+        <text class="post-data__circle-text" x="45" y="45">69%</text>
+      </svg>
+      <span class="post-data__circle-label">Descripción del dato</span>
+    </div>
+    <!-- repetir x3 -->
+  </div>
+  <p class="post-data__source">Fuentes: <a href="URL" target="_blank" rel="noopener">Nombre</a></p>
+</div>
+```
+
+**Fórmula dashoffset:** `213.6 × (1 - porcentaje/100)`  
+Ejemplos: 25% → 160.2 | 50% → 106.8 | 75% → 53.4 | 89% → 23.5
+
+---
+
+### Qué estilo usar en cada artículo
+
+| Artículo | Estilo recomendado |
+|---|---|
+| El mito del trabajo moderno | Estilo 1 (números grandes) ✅ ya aplicado |
+| El precio del silencio | Estilo 2 (barras) — pendiente |
+| Metanoia y el sistema | Estilo 3 (círculos) — pendiente |
+| El liderazgo que nadie enseña | Estilo 1 (números grandes) ✅ ya aplicado |
+
+---
 
 ```html
 <div class="post-data">
