@@ -147,10 +147,36 @@ function initThemeToggle() {
   });
 }
 
+/* ─── Mobile Hamburger Menu ──────────────────────────────────── */
+function initMobileMenu() {
+  const btn = document.getElementById('nav-hamburger');
+  const links = document.querySelector('.nav__links');
+  if (!btn || !links) return;
+
+  function closeMenu() {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTagFilter();
   initNewsletter();
   initActiveNav();
   initThemeToggle();
+  initMobileMenu();
   initScrollReveal();
 });

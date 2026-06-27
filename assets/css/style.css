@@ -92,6 +92,56 @@ a { color: inherit; text-decoration: none; }
 .nav__links a:hover,
 .nav__links a.active { color: var(--color-accent); }
 
+/* ─── Hamburger (mobile) ─────────────────────────────────────── */
+.nav__hamburger {
+  display: none;
+  background: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-secondary);
+  transition: border-color var(--transition), color var(--transition);
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+.nav__hamburger:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.nav__hamburger .icon-close { display: none; }
+.nav__hamburger.open .icon-burger { display: none; }
+.nav__hamburger.open .icon-close { display: block; }
+
+@media (max-width: 768px) {
+  .nav__hamburger { display: flex; margin-left: auto; }
+
+  .nav__links {
+    display: none;
+    position: fixed;
+    top: 60px; left: 0; right: 0; bottom: 0;
+    background: var(--color-background);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    z-index: 98;
+    list-style: none;
+  }
+  .nav__links.open { display: flex; }
+  .nav__links a {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    transition: color var(--transition);
+  }
+  .nav__links a:hover,
+  .nav__links a.active { color: var(--color-accent); }
+}
+
 /* ─── Hero ───────────────────────────────────────────────────── */
 .hero {
   padding: 80px 0 72px;
@@ -1108,7 +1158,6 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   .post-card { grid-column: span 12; }
   .post-card:not(.post-card--featured) { grid-column: span 12; }
-  .nav__links { display: none; }
   .hero { padding: 48px 0 40px; }
   .newsletter { padding: 32px 24px; }
   .newsletter__form { flex-direction: column; min-width: unset; width: 100%; }
@@ -1186,7 +1235,7 @@ a { color: inherit; text-decoration: none; }
 }
 .about__bio {
   font-size: 1rem;
-  color: #3D3D3D;
+  color: #B8B4AC;
   line-height: 1.8;
   margin-bottom: 12px;
 }
