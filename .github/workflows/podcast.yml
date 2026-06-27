@@ -1,0 +1,49 @@
+name: Generar Podcast
+
+# Se activa cuando se sube un artículo nuevo a /posts/
+on:
+  push:
+    paths:
+      - 'posts/**.html'
+
+jobs:
+  podcast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: |
+          pip install notebooklm-py playwright
+          playwright install chromium --with-deps
+
+      # Restaurar las credenciales de Google guardadas en GitHub Secrets
+      - name: Restaurar credenciales NotebookLM
+        run: |
+          mkdir -p ~/.notebooklm
+          echo '${{ secrets.NOTEBOOKLM_AUTH }}' > ~/.notebooklm/storage.json
+
+      # Detectar qué artículo cambió y generar su podcast
+      - name: Generar podcast del artículo nuevo
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'posts/*.html' | head -1)
+          if [ -n "$CHANGED" ]; then
+            SLUG=$(basename "$CHANGED" .html)
+            URL="https://thinking.zcod3.com/posts/${SLUG}.html"
+            echo "Generando podcast para: $URL"
+            python scripts/brecha.py podcast --url "$URL" --formato deep-dive
+          fi
+
+      # Subir el MP3 generado al repo
+      - name: Commit del MP3
+        run: |
+          git config user.name "Brecha Bot"
+          git config user.email "bot@zcod3.com"
+          git add audio/*.mp3
+          git diff --staged --quiet || git commit -m "podcast: auto-generated from article"
+          git push
