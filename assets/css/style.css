@@ -272,6 +272,13 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
+.post-card__image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .post-card__image-placeholder {
   width: 100%;
   aspect-ratio: 16/9;
