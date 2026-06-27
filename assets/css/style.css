@@ -119,6 +119,7 @@ a { color: inherit; text-decoration: none; }
   max-width: 780px;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 .hero__title em {
@@ -1112,7 +1113,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 480px) {
   .section { padding: 40px 0; }
   .container { padding: 0 16px; }
-  .hero__title { font-size: 2.25rem; }
+  .hero__title { font-size: 3rem; letter-spacing: -0.01em; }
   .post-infographic { padding: 24px 20px; }
   .infographic-compare__row span { font-size: 0.8125rem; padding: 10px 10px; }
 }

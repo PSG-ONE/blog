@@ -20,27 +20,48 @@ function initTagFilter() {
 }
 
 /* ─── Newsletter Form ────────────────────────────────────────── */
+const WORKER_URL = 'https://brecha-newslette.santagadea-ia.workers.dev';
+
 function initNewsletter() {
   const form  = document.getElementById('newsletter-form');
   const input = document.getElementById('newsletter-email');
   const btn   = document.getElementById('newsletter-btn');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!input.value || !input.value.includes('@')) {
       input.style.borderColor = '#DC2626';
       input.focus();
       return;
     }
+
     input.style.borderColor = '';
-    btn.textContent = '✓ Listo';
+    btn.textContent = 'Enviando...';
     btn.disabled = true;
-    input.value = '';
-    setTimeout(() => {
-      btn.textContent = 'Suscribirse';
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: input.value }),
+      });
+
+      if (res.ok) {
+        btn.textContent = '✓ Suscrito';
+        input.value = '';
+        setTimeout(() => {
+          btn.textContent = 'Suscribirse';
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        throw new Error('error');
+      }
+    } catch {
+      btn.textContent = 'Intentar de nuevo';
       btn.disabled = false;
-    }, 3000);
+      input.style.borderColor = '#DC2626';
+    }
   });
 }
 
