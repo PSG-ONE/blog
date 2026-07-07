@@ -813,7 +813,7 @@ a { color: inherit; text-decoration: none; }
 }
 .post-tools__item {
   font-size: 0.9375rem;
-  color: #3D3D3D;
+  color: var(--color-secondary);
   line-height: 1.7;
   padding-left: 16px;
   border-left: 2px solid var(--color-accent);
@@ -823,7 +823,7 @@ a { color: inherit; text-decoration: none; }
 }
 .post-tools__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px;
 }
 .post-tools__tool {
