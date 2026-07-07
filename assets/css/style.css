@@ -876,12 +876,12 @@ a { color: inherit; text-decoration: none; }
 .post-sources__item {
   font-size: 0.875rem;
   color: var(--color-secondary);
-  padding: 12px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--color-muted);
-  line-height: 1.6;
+  line-height: 1.7;
   display: flex;
-  gap: 12px;
-  align-items: baseline;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .post-sources__item:last-child { border-bottom: none; }
@@ -890,7 +890,9 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.6875rem;
   font-weight: 700;
   color: var(--color-accent);
-  min-width: 18px;
+  min-width: 28px;
+  padding-top: 2px;
+  flex-shrink: 0;
 }
 
 .post-sources__item em {
