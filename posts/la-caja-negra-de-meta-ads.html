@@ -111,10 +111,10 @@
         </figure>
 
         <figure class="post-diagram">
-          <p class="post-diagram__title">Cómo aprende Andromeda: secuencias de comportamiento del usuario</p>
-          <img src="../image/meta-sequence-learning-diagram.png" alt="Diagrama de Event Sequence Learning de Meta — cómo el sistema aprende del comportamiento del usuario" loading="lazy" />
+          <p class="post-diagram__title">Sequence Learning: cómo Meta lee el historial completo del usuario</p>
+          <img src="../image/meta-sequence-learning-diagram.png" alt="Diagrama de Sequence Learning Recommendation Model de Meta — comparación con el modelo de Deep Learning tradicional" loading="lazy" />
           <figcaption class="post-diagram__caption">
-            Andromeda no analiza acciones individuales. Aprende de secuencias completas. El sistema mapea el historial de interacciones de cada usuario (visualizaciones, clics, compras, tiempo en pantalla) como una cadena de eventos, y compara esa secuencia con el patrón de tu creativo. Así decide si tu anuncio es relevante para esa persona en ese momento exacto. <em>Fuente: Meta Engineering Blog.</em>
+            El modelo tradicional de Meta (izquierda) usaba embeddings estáticos: clics recientes, páginas que le gustan, marcas vistas. El Sequence Learning Recommendation Model (derecha) cambia el enfoque: convierte cada interacción del usuario en un evento con timestamp y posición, y los procesa como una cadena ordenada. El resultado es una representación personalizada del usuario en ese momento exacto, no un perfil promedio. <em>Fuente: Meta Engineering Blog, nov 2024.</em>
           </figcaption>
         </figure>
 
