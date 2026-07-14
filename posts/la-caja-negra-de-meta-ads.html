@@ -76,7 +76,7 @@
 
         <p>Cuatro cambios en menos de cuatro semanas. Sin aviso previo. Sin que nadie te explicara qué hacer.</p>
 
-        <p>Si llevas tiempo en Meta Ads, ya reconoces ese patrón. La plataforma cambia. Tus números se mueven sin que sepas por qué. Ajustas lo que puedes y esperas que funcione. Pero hay una razón de fondo que explica por qué todo esto pasa — y casi nadie la conoce.</p>
+        <p>Si llevas tiempo en Meta Ads, ya reconoces ese patrón. La plataforma cambia. Tus números se mueven sin que sepas por qué. Ajustas lo que puedes y esperas que funcione. Pero hay una razón de fondo que explica por qué todo esto pasa. Y casi nadie la conoce.</p>
 
         <p>En diciembre de 2024, el equipo de ingeniería de Meta publicó en su blog oficial el anuncio de Andromeda. No fue una nota de prensa para anunciantes. Fue un paper técnico para ingenieros. La mayoría de los anunciantes nunca lo leyó. El despliegue global se completó en octubre de 2025. Y desde ese momento, todo el manual que aprendiste sobre Meta Ads comenzó a trabajar en tu contra.</p>
 
@@ -88,7 +88,7 @@
 
         <p>Eso era el manual. Y durante una década funcionó.</p>
 
-        <p>Andromeda rompe ese manual desde la base. El sistema anterior usaba reglas predefinidas y parámetros de audiencia para filtrar anuncios. El nuevo usa redes neuronales profundas que leen el contenido real de tu anuncio — el visual, el mensaje, los colores, la emoción — y lo compara con el estado de cada usuario en tiempo real.</p>
+        <p>Andromeda rompe ese manual desde la base. El sistema anterior usaba reglas predefinidas y parámetros de audiencia para filtrar anuncios. El nuevo usa redes neuronales profundas que leen el contenido real de tu anuncio: el visual, el mensaje, los colores, la emoción. Y lo compara con el estado de cada usuario en tiempo real.</p>
 
         <p><strong>¿Qué significa eso en términos simples?</strong></p>
 
@@ -100,10 +100,10 @@
 
         <p>Andromeda no trabaja solo. Meta desplegó tres sistemas de IA que operan en secuencia cada vez que alguien abre Facebook o Instagram.</p>
 
-        <p><strong>Andromeda</strong> es la primera puerta. De los decenas de millones de anuncios activos en la plataforma, selecciona los miles de candidatos que siquiera tienen derecho a competir. Según el Meta Engineering Blog, esto implica procesar tres órdenes de magnitud más anuncios que cualquier etapa posterior. Si Andromeda no te selecciona, el resto del proceso no existe para ti. Tu presupuesto, tu targeting, tu bid — nada de eso importa si no pasas esta puerta.</p>
+        <p><strong>Andromeda</strong> es la primera puerta. De los decenas de millones de anuncios activos en la plataforma, selecciona los miles de candidatos que siquiera tienen derecho a competir. Según el Meta Engineering Blog, esto implica procesar tres órdenes de magnitud más anuncios que cualquier etapa posterior. Si Andromeda no te selecciona, el resto del proceso no existe para ti. Tu presupuesto, tu targeting, tu bid: nada de eso importa si no pasas esta puerta.</p>
 
         <figure class="post-diagram">
-          <p class="post-diagram__title">01 — Andromeda: Sistema de recuperación jerárquico de anuncios</p>
+          <p class="post-diagram__title">Andromeda: Sistema de recuperación jerárquico de anuncios</p>
           <img src="../image/meta-andromeda-diagram.png" alt="Diagrama oficial de Meta Andromeda — índice jerárquico de anuncios sobre hardware MTIA y NVIDIA Grace Hopper" loading="lazy" />
           <figcaption class="post-diagram__caption">
             Las solicitudes de usuarios entran a un índice jerárquico de anuncios que opera en tres capas de modelos, procesadas sobre el chip MTIA de Meta y la plataforma NVIDIA Grace Hopper. En cada capa, el pool de candidatos se reduce: de millones a miles, de miles a decenas. El resultado llega al usuario en menos de 100ms. <em>Fuente: Meta Engineering Blog, dic 2024.</em>
@@ -111,35 +111,35 @@
         </figure>
 
         <figure class="post-diagram">
-          <p class="post-diagram__title">Andromeda en profundidad: aprendizaje por secuencia de eventos</p>
+          <p class="post-diagram__title">Cómo aprende Andromeda: secuencias de comportamiento del usuario</p>
           <img src="../image/meta-sequence-learning-diagram.png" alt="Diagrama de Event Sequence Learning de Meta — cómo el sistema aprende del comportamiento del usuario" loading="lazy" />
           <figcaption class="post-diagram__caption">
-            Andromeda no analiza acciones individuales — aprende de secuencias completas. El sistema mapea el historial de interacciones de cada usuario (visualizaciones, clics, compras, tiempo en pantalla) como una cadena de eventos, y compara esa secuencia con el patrón de tu creativo. Así decide si tu anuncio es relevante para esa persona en ese momento exacto. <em>Fuente: Meta Engineering Blog.</em>
+            Andromeda no analiza acciones individuales. Aprende de secuencias completas. El sistema mapea el historial de interacciones de cada usuario (visualizaciones, clics, compras, tiempo en pantalla) como una cadena de eventos, y compara esa secuencia con el patrón de tu creativo. Así decide si tu anuncio es relevante para esa persona en ese momento exacto. <em>Fuente: Meta Engineering Blog.</em>
           </figcaption>
         </figure>
 
         <p><strong>GEM — Generative Ads Model</strong> es el cerebro creativo del sistema. Identificado como el núcleo central del motor de recomendación de Meta, GEM analiza patrones en comportamientos orgánicos y secuencias de anuncios para sugerir qué tipo de creativo, titular y formato tiene mayor probabilidad de funcionar para cada placement y cada usuario. También puede modificar elementos de tu anuncio — recortar la imagen, ajustar el brillo, generar variaciones de texto — sin pedirte permiso. Lo que el usuario ve puede no ser exactamente lo que tú subiste.</p>
 
         <figure class="post-diagram">
-          <p class="post-diagram__title">02 — GEM: Del modelo central a los modelos por vertical</p>
+          <p class="post-diagram__title">GEM: Del modelo fundacional a los modelos por vertical</p>
           <img src="../image/meta-gem-diagram.png" alt="Diagrama oficial de Meta GEM — Generative Ads Model y su pipeline de foundation models a modelos verticales" loading="lazy" />
           <figcaption class="post-diagram__caption">
-            GEM actúa como modelo fundacional central: a partir de su arquitectura base, genera domain-specific foundation models especializados por tipo de conversión. Después aplica técnicas de post-training — knowledge distillation, parameter sharing, representation learning — para producir los modelos verticales que se despliegan directamente frente a usuarios, uno por formato y placement. <em>Fuente: Meta Engineering Blog, nov 2025.</em>
+            GEM actúa como modelo fundacional central: a partir de su arquitectura base, genera domain-specific foundation models especializados por tipo de conversión. Después aplica técnicas de post-training (knowledge distillation, parameter sharing, representation learning) para producir los modelos verticales que se despliegan directamente frente a usuarios, uno por formato y placement. <em>Fuente: Meta Engineering Blog, nov 2025.</em>
           </figcaption>
         </figure>
 
         <p><strong>Meta Lattice</strong> toma la decisión final. Reemplazó a los cientos de modelos de ranking separados que Meta tenía para Feed, Reels, Stories e Instagram. Ahora un solo sistema aprende de todos simultáneamente. Si un patrón creativo funciona para conversiones en Instagram Stories, Lattice aplica ese aprendizaje automáticamente a campañas de Facebook Feed. Según Meta for Business, Lattice mejoró la calidad de los anuncios en un 12% y las conversiones en un 6% desde su despliegue.</p>
 
         <figure class="post-diagram">
-          <p class="post-diagram__title">03 — Lattice: Una red que aprende de todos los objetivos a la vez</p>
+          <p class="post-diagram__title">Lattice: Una red neuronal que aprende de todos los objetivos a la vez</p>
           <img src="../image/meta-lattice-diagram.png" alt="Diagrama oficial de Meta Lattice — red neuronal unificada con múltiples entradas y objetivos de negocio" loading="lazy" />
           <figcaption class="post-diagram__caption">
-            Lattice procesa simultáneamente cuatro tipos de señales de entrada — superficie del producto, formato del anuncio, objetivo de conversión y políticas de privacidad — y las conecta a cuatro resultados posibles: click, ocultar anuncio, instalar app, agregar al carrito. Un solo modelo, todas las variables, en tiempo real. <em>Fuente: Meta Engineering Blog, animación de demostración interna.</em>
+            Lattice procesa simultáneamente cuatro tipos de señales de entrada (superficie del producto, formato del anuncio, objetivo de conversión y políticas de privacidad) y las conecta a cuatro resultados posibles: click, ocultar anuncio, instalar app, agregar al carrito. Un solo modelo, todas las variables, en tiempo real. <em>Fuente: Meta Engineering Blog, animación de demostración interna.</em>
           </figcaption>
         </figure>
 
         <figure class="post-diagram">
-          <p class="post-diagram__title">Lattice en profundidad: el modelo de ranking adaptativo</p>
+          <p class="post-diagram__title">Lattice por dentro: el modelo de ranking adaptativo por etapas</p>
           <img src="../image/meta-adaptive-ranking-diagram.png" alt="Diagrama oficial de Meta Adaptive Ranking Model — pipeline de ranking adaptativo por etapas" loading="lazy" />
           <figcaption class="post-diagram__caption">
             El Adaptive Ranking Model es el pipeline completo que Lattice ejecuta internamente: múltiples etapas de scoring en cascada, cada una con más contexto y menor volumen de candidatos. Los anuncios que sobreviven cada etapa llegan al ranking final con una puntuación que combina relevancia, probabilidad de conversión e impacto en la experiencia del usuario. <em>Fuente: Meta Engineering Blog, mar 2026.</em>
@@ -221,7 +221,7 @@
 
         <p><strong>Pocas variaciones del mismo creativo.</strong> Antes escalabas el ganador. Ahora, Andromeda agrupa las variaciones similares en una sola entidad. Si tienes diez versiones del mismo producto con pequeños cambios de color o texto, el sistema las trata como si fuera un solo anuncio. No diez oportunidades. Una.</p>
 
-        <p><strong>Escalar el creativo ganador semanas y semanas.</strong> Antes un anuncio podía correr meses. Ahora la vida útil de un creativo se comprimió de 6-8 semanas a 2-4 semanas. Andromeda encuentra a las personas perfectas para tu anuncio muy rápido — y las agota igual de rápido.</p>
+        <p><strong>Escalar el creativo ganador semanas y semanas.</strong> Antes un anuncio podía correr meses. Ahora la vida útil de un creativo se comprimió de 6-8 semanas a 2-4 semanas. Andromeda encuentra a las personas perfectas para tu anuncio muy rápido. Y las agota igual de rápido.</p>
 
         <p><strong>¿Cuándo fue la última vez que renovaste completamente tus creativos?</strong></p>
 
@@ -233,7 +233,7 @@
 
         <p><strong>Más creativos genuinamente distintos, no más variaciones.</strong> Los anunciantes con mejor performance corrieron un 33% más anuncios que el promedio. Pero la clave no es cantidad — es diversidad real. Un test controlado con 25 creativos verdaderamente distintos en un solo ad set produjo un 17% más de conversiones a un 16% menos de costo comparado con una estructura tradicional de múltiples ad sets segmentados. Andromeda necesita señales variadas para encontrar todos los segmentos posibles de tu audiencia.</p>
 
-        <p><strong>Targeting amplio desde el inicio.</strong> Dejar que Andromeda haga el trabajo de encontrar la audiencia en lugar de definirla tú. Esto va en contra de una década de mejores prácticas en Meta Ads — pero los datos dicen que funciona un 49% mejor bajo el sistema actual.</p>
+        <p><strong>Targeting amplio desde el inicio.</strong> Dejar que Andromeda haga el trabajo de encontrar la audiencia en lugar de definirla tú. Esto va en contra de una década de mejores prácticas en Meta Ads. Pero los datos dicen que funciona un 49% mejor bajo el sistema actual.</p>
 
         <p><strong>Activar Advantage+ Creative.</strong> Según el blog oficial de Meta Engineering, cuando anunciantes que no usaban Advantage+ Creative activaron sus funciones de IA, experimentaron un 22% de aumento en ROAS. Los que usaron generación de imagen vieron un 7% adicional en conversiones. GEM funciona mejor cuando le das permiso de trabajar.</p>
 
@@ -292,7 +292,7 @@
             <p class="post-tools__group-title">Metodologías</p>
             <ul class="post-tools__list">
               <li class="post-tools__item">
-                <strong>Creative Sprint.</strong> En lugar de escalar un solo anuncio ganador, producir un bloque de 20-30 creativos genuinamente distintos cada 3-4 semanas. Formatos diferentes, ángulos emocionales distintos, hooks variados. No variaciones del mismo — anuncios que Andromeda lea como entidades separadas.
+                <strong>Creative Sprint.</strong> En lugar de escalar un solo anuncio ganador, producir un bloque de 20-30 creativos genuinamente distintos cada 3-4 semanas. Formatos diferentes, ángulos emocionales distintos, hooks variados. No variaciones del mismo: anuncios que Andromeda lea como entidades separadas.
               </li>
               <li class="post-tools__item">
                 <strong>Broad First Testing.</strong> Lanzar campañas con targeting mínimo (edad + país, sin intereses) y dejar que el sistema identifique la audiencia a partir de las señales del creativo. Validar con datos reales antes de añadir restricciones de segmentación.
